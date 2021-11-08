@@ -3,7 +3,9 @@ The script simply creates the application object as an instance of class Flask i
 '''
 
 from flask import Flask
+from flask.config import Config
 
 app = Flask(__name__)
+app.config.from_object(Config)
 
 from app import routes
